@@ -1,0 +1,77 @@
+<!-- <template id="taste"> -->
+
+<style>
+    .taste {
+        width: 100%;
+        height: 100%;
+        background: #fdf9f0;
+        background: #f3f3f3;
+        /* overflow: scroll; */
+    }
+
+    .layout {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height:100%;
+    }
+
+    .flightslabel {
+        margin: 10px;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .buttons{
+        height:40px;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        border-bottom:1px solid #ddd;
+        border-top:1px solid #ddd;
+    }
+
+    .togglebutton{
+        width:50%;
+        height:100%;
+        border-radius: 0;
+        border:none;
+        font-size:10px;
+    }
+
+    .selectionarea{
+        height:150px;
+        width: 100%;
+        border-bottom:1px solid #ddd;
+    }
+
+    .maparea{
+        height:150px;
+        width: 100%;
+        border-bottom:1px solid #ddd;
+    }
+  
+
+    .scrollable{
+        overflow-y: scroll;
+    }
+</style>
+
+<div class="taste">
+    <div class="layout">
+        <label class="flightslabel">Flights</label>
+        <section class="buttons">
+            <button class="togglebutton">My Flights</button>
+            <button class="togglebutton">Book A Flight</button>
+        </section>
+        <section class="selectionarea"></section>
+        <section class="maparea">
+
+            <!-- mapbox://styles/antonmc/cjtkgcy972e891fo1o6r32ud0 -->
+
+
+        </section>
+    </div>
+</div>
+<!-- </template> -->

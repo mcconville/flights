@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script type="module">
+    import 'https://jspm.dev/carbon-web-components/es/components/dropdown/dropdown.js';
+    import 'https://jspm.dev/carbon-web-components/es/components/dropdown/dropdown-item.js';
+  </script>
+  <link rel="stylesheet" href="./style.css">
+  <style type="text/css" rel="stylesheet">
+    #app {
+      font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+      width: 300px;
+      margin: 2rem;
+    }
+
+    bx-dropdown:not(:defined),
+    bx-dropdown-item:not(:defined) {
+      visibility: hidden;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="grid-container">
+
+      <section class="header">
+        <div class="title">Creating and building with a custom operator</div>
+      </section>
+
+      <section class="menuarea">
+        <div class="intro">Introduction</div>
+        <section class="blurb">
+          <p>This project is a live, working demo of an app running on RedHat OpenShift, built on a custom operator.
+          </p>
+          <p>
+            We developed this project as a reference example, and a set of resources, for other teams to build their own
+            operators, and applications that use them.
+          </p>
+          <p>
+          The app itself is a flight booking tool, using Janus Graph as a database. The custom operator is an operator
+          for Janus Graph.</p>
+        </section>
+      </section>
+
+      <section class="phonearea">
+        <div class="Phone">
+          <phone-element id="phoneview">
+            <flights-element></flights-element>
+          </phone-element>
+          <script>
+            var supportTest = 'customElements' in window;
+            console.log('Supports web components = ' + supportTest);
+            if (supportTest == false) {
+              window.alert(
+                'If you see this alert, it means this example is not compatible with your browser. This example uses Web Components - a technology supported in the latest versions of Firefox, Chrome and Safari. Please update your browser to the latest release.'
+              );
+            }
+          </script>
+        </div>
+      </section>
+
+
+    </div>
+  </div>
+
+
+
+
+</body>
+
+</html>
+<script src="./components/navigationbutton.js"></script>
+<script src="./components/navigation.js"></script>
+<script src="./components/phone.js"></script>
+<script src="./components/flights.js"></script>
