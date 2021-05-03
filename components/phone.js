@@ -47,7 +47,7 @@ class Phone extends HTMLElement {
             mobileview.innerHTML = '<homescreen-element id="HOMESCREEN"></homescreen-element>';
             phone.hideNavigation();
         });
-        phone.showNavigation();
+        // phone.showNavigation();
     }
 }
 

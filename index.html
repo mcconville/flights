@@ -5,8 +5,12 @@
   <script type="module">
     import 'https://jspm.dev/carbon-web-components/es/components/dropdown/dropdown.js';
     import 'https://jspm.dev/carbon-web-components/es/components/dropdown/dropdown-item.js';
+    
   </script>
+  <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
+
   <link rel="stylesheet" href="./style.css">
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
   <style type="text/css" rel="stylesheet">
     #app {
       font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
@@ -40,9 +44,24 @@
             operators, and applications that use them.
           </p>
           <p>
-          The app itself is a flight booking tool, using Janus Graph as a database. The custom operator is an operator
-          for Janus Graph.</p>
+            The app itself is a flight booking tool, using Janus Graph as a database. The custom operator is an operator
+            for Janus Graph.</p>
         </section>
+        <div class="intro">Creating a Custom Operator</div>
+        <ul class="linklist">
+          <li class="assetlink"><a class="operatorlink" href="url">Anatomy Of An Operator</a></li>
+          <li class="assetlink"><a class="operatorlink" href="url">Building A Simple Operator</a></li>
+          <li class="assetlink"> <a class="operatorlink" href="url">Deeper Dive Into A Simple Operator</a></li>
+          <li class="assetlink"> <a class="operatorlink" href="url">Building A Complex Operator</a></li>
+          <li class="assetlink"> <a class="operatorlink" href="url">Deeper Dive Into A Complex Operator</a></li>
+          <li class="assetlink"> <a class="operatorlink" href="url">Operator Course/Badge</a></li>
+        </ul>
+        <div class="intro">Building with a Custom Operator</div>
+        <ul class="linklist">
+          <li class="assetlink"><a class="operatorlink" href="url">Janus Graph Case Study</a></li>
+          <li class="assetlink"><a class="operatorlink" href="url">Deploying The Operator</a></li>
+          <li class="assetlink"> <a class="operatorlink" href="url">Connecting Microservices</a></li>
+        </ul>
       </section>
 
       <section class="phonearea">
@@ -76,3 +95,5 @@
 <script src="./components/navigation.js"></script>
 <script src="./components/phone.js"></script>
 <script src="./components/flights.js"></script>
+<script src="./components/map.js"></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>

@@ -51,10 +51,25 @@ body {
 
 .intro{
     font-weight:bold;
+    margin-top:5px;
 }
 
 .blurb{
     margin-top:10px;
+}
+
+.assetlink{
+    list-style-type:none;
+    color:white;
+    font-weight: bold;
+    padding: 0;
+    line-height: 18px;
+}
+
+.operatorlink{
+    text-decoration: none;
+    color:white;
+    font-size: 11px;
 }
 
 
@@ -63,6 +78,7 @@ body {
     color: white;
     font-size: 14px;
     text-transform: capitalize;
+    font-weight: bold;
 }
 
 .bannerarea {
@@ -76,6 +92,10 @@ body {
     height: 40px;
     align-items: center;
     justify-items: center;
+}
+
+.linklist{
+    padding-left: 10px;
 }
 
 .phonearea{

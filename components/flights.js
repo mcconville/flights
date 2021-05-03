@@ -22,21 +22,9 @@ class Flights extends HTMLElement {
         let res = await fetch('./components/flights.html')
         var sr = this.shadowRoot;
         sr.innerHTML = await res.text();
-        this.showTaste();
+        // this.showTaste();
 
-        var buttonnames = ['vegan', 'seafood', 'noodles', 'cafe'];
-
-        var component = this;
-
-        buttonnames.forEach(function (buttonname) {
-            let b = component.shadowRoot.getElementById(buttonname);
-            b.onclick = component.showRestaurantOptions.bind(component);
-        })
-
-        let outcome = await fetch('./components/restaurants.json')
-        var rlist = await outcome.text();
-        this.restaurants = JSON.parse(rlist);
-        this.randomRestaurantList(this.restaurants);
+     
     }
 
     randomRestaurantList(restaurants) {
@@ -133,28 +121,28 @@ class Flights extends HTMLElement {
         var anchor = sr.getElementById('restaurantlist');
 
 
-        anchor.addEventListener('RESTAURANT-SELECTION', e => {
-            console.log(e.detail.eventData.restaurant);
-            anchor.innerHTML = "";
+        // anchor.addEventListener('RESTAURANT-SELECTION', e => {
+        //     console.log(e.detail.eventData.restaurant);
+        //     anchor.innerHTML = "";
 
-            var selected = e.detail.eventData.restaurant;
+        //     var selected = e.detail.eventData.restaurant;
 
-            component.restaurants.forEach(function (restaurant) {
-                if (restaurant.name == selected) {
+        //     component.restaurants.forEach(function (restaurant) {
+        //         if (restaurant.name == selected) {
 
-                    component.setCaption('Menu for ' + restaurant.name + ' ...');
+        //             component.setCaption('Menu for ' + restaurant.name + ' ...');
 
-                    restaurant.menu.forEach(function (menuitem) {
-                        let entry = document.createElement('menuitem-element');
-                        entry.setAttribute('dish', menuitem.item);
-                        entry.setAttribute('cost', menuitem.cost);
-                        entry.setAttribute('restaurant', restaurant.name);
-                        entry.setAttribute('type', restaurant.type);
-                        anchor.appendChild(entry);
-                    })
-                }
-            })
-        });
+        //             restaurant.menu.forEach(function (menuitem) {
+        //                 let entry = document.createElement('menuitem-element');
+        //                 entry.setAttribute('dish', menuitem.item);
+        //                 entry.setAttribute('cost', menuitem.cost);
+        //                 entry.setAttribute('restaurant', restaurant.name);
+        //                 entry.setAttribute('type', restaurant.type);
+        //                 anchor.appendChild(entry);
+        //             })
+        //         }
+        //     })
+        // });
     }
 }
 
