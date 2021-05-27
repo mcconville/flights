@@ -1,0 +1,94 @@
+<style>
+    .locations {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 75px;
+        justify-content: space-around;
+    }
+
+    .logistics {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .location {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .locationlabel {
+        font-size: 12px;
+    }
+
+    .selectbox {
+        border: 1px solid #ddd;
+        margin-top: 10px;
+        height: 30px;
+        font-size: 12px;
+        padding: 5px;
+        background: var(--flights-phone-background);
+    }
+
+    .icon {
+        height: 75px;
+        width: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .pic {
+        height: 20px;
+        width: 20px;
+    }
+
+    .date {
+        border: 1px solid #ddd;
+        width: 100px;
+        height: 30px;
+        font-size: 9px;
+        margin-top: 10px;
+        background: var(--flights-phone-background);
+    }
+</style>
+<div>
+    <section class="locations">
+        <div class="location">
+            <label class="locationlabel">From:</label>
+            <select class="selectbox" id="origin" value=1>
+                <option data-separator="true"> Select Option </option>
+            </select>
+        </div>
+
+        <div class="icon">
+            <img class="pic" src="./images/plane.svg">
+        </div>
+
+        <div class="location">
+            <label class="locationlabel">To:</label>
+            <select class="selectbox" id="destination" value=3>
+                <option data-separator="true"> Select Option </option>
+            </select>
+        </div>
+
+    </section>
+    <section class="logistics">
+        <section class="locations">
+            <div class="location">
+                <label class="locationlabel">Depart:</label>
+                <input class="date" type="date" id="myDate" value="2014-02-09">
+            </div>
+
+            <div class="icon">
+                <img class="pic" src="./images/schedule.svg">
+            </div>
+
+            <div class="location">
+                <label class="locationlabel">Return:</label>
+                <input class="date" type="date" id="myDate" value="2014-02-09">
+            </div>
+        </section>
+</div>

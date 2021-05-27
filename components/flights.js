@@ -24,7 +24,8 @@ class Flights extends HTMLElement {
         sr.innerHTML = await res.text();
         // this.showTaste();
 
-     
+       
+
     }
 
     randomRestaurantList(restaurants) {

@@ -41,7 +41,7 @@
     }
 
     .selectionarea {
-        height: 150px;
+        height: 155px;
         width: 100%;
         border-bottom: 1px solid #ddd;
     }
@@ -65,12 +65,11 @@
             <button class="togglebutton">My Flights</button>
             <button class="togglebutton">Book A Flight</button>
         </section>
-        <section class="selectionarea"></section>
+        <section class="selectionarea">
+            <picker-element></picker-element>
+        </section>
         <section class="maparea">
-            <map-element></map-element>
-            <!-- mapbox://styles/antonmc/cjtkgcy972e891fo1o6r32ud0 -->
-
-
+            <map-element originlat=-122.414 originlong=37.776 destinationlat=-77.032 destinationlong=38.913></map-element>
         </section>
     </div>
 </div>

@@ -1,7 +1,15 @@
 class Map extends HTMLElement {
 
     static get observedAttributes() {
-        return ['source', 'destination'];
+        return ['originlat',
+            'originlong',
+            'firststoplat',
+            'firststoplong',
+            'secondstoplat',
+            'secondstoplong',
+            'destinatonlat',
+            'destinatonlong'
+        ];
     }
 
     constructor() {
@@ -30,11 +38,23 @@ class Map extends HTMLElement {
             style: 'mapbox://styles/antonmc/cjtkgcy972e891fo1o6r32ud0'
         });
 
+        var customElement = this;
+
+        var originlat = customElement.getAttribute('originlat');
+        var originlong = customElement.getAttribute('originlong');
+
+        var destinationlat = customElement.getAttribute('destinationlat');
+        var destinationlong = customElement.getAttribute('destinationlong');
+
         // San Francisco
-        var origin = [-122.414, 37.776];
+        // var origin = [-122.414, 37.776];
+
+        var origin = [originlat, originlong];
+
+        var destination = [destinationlat, destinationlong];
 
         // Washington DC
-        var destination = [-77.032, 38.913];
+        // var destination = [-77.032, 38.913];
 
         // A simple line from origin to destination.
         var route = {
